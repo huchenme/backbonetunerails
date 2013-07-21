@@ -8,3 +8,5 @@
 #= require_tree ../../app/assets/javascripts/views
 #= require_tree ../../app/assets/javascripts/routers
 #= require_tree .
+
+window.albumData = getJSONFixture('albumData');
