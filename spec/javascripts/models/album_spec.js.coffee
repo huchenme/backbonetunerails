@@ -1,5 +1,4 @@
-describe "Backbonetunerails.Models.Album", ->
-
+describe "Album", ->
   beforeEach ->
     @album = new Backbonetunerails.Models.Album(albumData[0])
 
