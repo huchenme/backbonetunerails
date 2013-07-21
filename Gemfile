@@ -26,7 +26,7 @@ gem 'jquery-rails'
 gem 'backbone-on-rails'
 
 group :development, :test do
-  gem 'jasminerice'
+  gem 'jasminerice', git: 'https://github.com/bradphelan/jasminerice.git'
   gem 'factory_girl_rails'
   gem 'faker'
   gem 'rspec-rails'
