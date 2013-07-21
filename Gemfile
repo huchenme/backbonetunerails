@@ -23,7 +23,7 @@ group :assets do
 end
 
 gem 'jquery-rails'
-gem 'rails-backbone'
+gem 'backbone-on-rails'
 
 group :development, :test do
   gem 'jasminerice', git: 'https://github.com/bradphelan/jasminerice.git'

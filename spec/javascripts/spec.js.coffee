@@ -1,4 +1,10 @@
 #= require jquery
-#= require_tree ./models
-#= require_tree ./collections
+#= require handlebars
+#= require underscore
+#= require backbone
+#= require backbonetunerails
+#= require_tree ../../app/assets/javascripts/models
+#= require_tree ../../app/assets/javascripts/collections
+#= require_tree ../../app/assets/javascripts/views
+#= require_tree ../../app/assets/javascripts/routers
 #= require_tree .

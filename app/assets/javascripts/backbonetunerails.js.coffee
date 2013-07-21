@@ -1,16 +1,10 @@
-#= require_self
-#= require_tree ./templates
-#= require_tree ./models
-#= require_tree ./views
-#= require_tree ./routers
-
 window.Backbonetunerails =
   Models: {}
   Collections: {}
-  Routers: {}
   Views: {}
+  Routers: {}
   initialize: ->
-    new Backbonetunerails.Router()
+    new Backbonetunerails.Routers.Router()
     Backbone.history.start(pushState: true)
 
 $(document).ready ->
