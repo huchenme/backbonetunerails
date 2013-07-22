@@ -14,10 +14,10 @@
 //= require jquery_ujs
 //= require foundation
 
-//= require handlebars
 //= require underscore
 //= require backbone
 //= require backbonetunerails
+//= require handlebars.runtime
 //= require_tree ../templates
 //= require_tree ./models
 //= require_tree ./collections

@@ -7,8 +7,15 @@ class Backbonetunerails.Models.Player extends Backbone.Model
   initialize: ->
     @playlist = new Backbonetunerails.Collections.Playlist()
 
+  reset: ->
+    @set
+      "currentAlbumIndex": 0
+      "currentTrackIndex": 0
+      "state": "stop"
+
   play: ->
     @set "state": "play"
+    @trigger "change:currentTrackIndex"
 
   pause: ->
     @set "state": "pause"

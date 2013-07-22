@@ -1,0 +1,9 @@
+<button class="queue add"><%= image_tag "add.png" %></button>
+<button class="queue remove"><%= image_tag "remove.png" %></button>
+<span class="album-title">{{title}}</span>
+<span class="artist-name">{{artist}}</span>
+<ol class="tracks">
+  {{#each tracks}}
+    <li>{{title}}</li>
+  {{/each}}
+</ol>

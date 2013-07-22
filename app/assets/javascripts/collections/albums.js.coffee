@@ -1,3 +1,3 @@
 class Backbonetunerails.Collections.Albums extends Backbone.Collection
-  url: '/albums'
+  url: '/albums.json'
   model: Backbonetunerails.Models.Album

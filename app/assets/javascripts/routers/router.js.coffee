@@ -4,19 +4,21 @@ class Backbonetunerails.Routers.Router extends Backbone.Router
     "blank": "blank"
 
   initialize: ->
-    # @libraryView = new LibraryView(collection: window.library)
-    # @playlistView = new PlaylistView(
-    #   collection: window.player.playlist
-    #   player: window.player
-    #   library: window.library
-    # )
+    @library = new Backbonetunerails.Collections.Albums()
+    @player = new Backbonetunerails.Models.Player()
+    @library.fetch({reset: true})
 
   home: ->
+    @libraryView = new Backbonetunerails.Views.Library(collection: @library)
+    @playlistView = new Backbonetunerails.Views.Playlist(
+      collection: @player.playlist
+      player: @player
+      library: @library
+    )
     $container = $("#container")
     $container.empty()
-    # $container.append @playlistView.render().el
-    # $container.append @libraryView.render().el
-    $container.text "index"
+    $container.append @playlistView.render().el
+    $container.append @libraryView.render().el
 
   blank: ->
     $container = $("#container")

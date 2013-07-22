@@ -1,0 +1,102 @@
+html, body
+  height: 100%
+
+body
+  margin: 0
+  padding: 0
+  font-family: "Helvetica Neue", "Helvetica", "Calibri", "sans"
+
+#container
+  height: auto
+  min-height: 100%
+  position: relative
+
+.albums
+  list-style: none
+  padding: 0 2%
+
+.album
+  list-style: none
+  display: inline-block
+  position: relative
+  width: 80%
+  margin: 0
+  padding: 1em 2em
+  font-style: italic
+  .artist-name
+    font-style: normal
+    font-weight: lighter
+    color: #999
+  .tracks
+    margin: 0
+    padding: .5em 0 0 1.5em
+  button.queue
+    position: absolute
+    left: 0
+    width: 16px
+    height: 16px
+    border: 0
+    padding: 0
+    margin: 0
+    background: transparent
+    cursor: pointer
+
+.playlist
+  position: absolute
+  width: 30%
+  padding: 0 3%
+  min-height: 100%
+  color: #eee
+  background-color: #333
+  .album
+    .queue.add
+      display: none
+    &.current
+      background-color: #383838
+      .tracks
+        .current
+          background-color: #995599
+    .tracks
+      li
+        font-style: normal
+        padding: .3em
+
+nav
+  width: 180px
+  margin: auto
+  padding: 0
+  button
+    &.control
+      text-indent: -9999px
+      width: 55px
+      height: 50px
+      border: 0
+      padding: 10px
+      margin: 0
+      background: transparent
+      cursor: pointer
+      &.play
+        background: image-url("control_play.png") center no-repeat
+        &:hover
+          background: image-url("control_play_hover.png") center no-repeat
+      &.pause
+        background: image-url("control_pause.png") center no-repeat
+        &:hover
+          background: image-url("control_pause_hover.png") center no-repeat
+      &.prev
+        background: image-url("control_start.png") center no-repeat
+        &:hover
+          background: image-url("control_start_hover.png") center no-repeat
+      &.next
+        background: image-url("control_end.png") center no-repeat
+        &:hover
+          background: image-url("control_end_hover.png") center no-repeat
+
+.library
+  margin-left: 36%
+  padding: 0.1em 2%
+  .album
+    .queue.remove
+      display: none
+    .tracks
+      display: none
